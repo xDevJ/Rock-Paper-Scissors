@@ -4,15 +4,22 @@
     3. Math.random chooses different choices
 */
 
-function getComputerChoice(num1, num2, num3) {
-    const randomGame = Math.floor(Math.random() * 3).toString
-    
+const computerChoice = ["rock", "paper", "scissors"];
+let result = "string";
 
-    return result;
+function getComputerChoice() {
+    const result = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+
+    console.log(result);
 }
 
-let num1 = 'rock';
-let num2 = 'paper';
-let num3 = 'scissors';
+getComputerChoice();
+
+
+/*
+    1. function name is getHumanChoice
+    2. function will return one of the valid choices by user input
+    3.can use prompt method to get users input then console.log
+*/
 
 
