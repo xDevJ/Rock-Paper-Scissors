@@ -4,17 +4,11 @@
     3. Math.random chooses different choices
 */
 
-const strings = ("rock", "papers", "scissors");
+function getComputerChoice(Rock, Paper, Scissors) {
+    const result = Math.floor(Math.random() * 3)
 
-const result = (strings)
-
-const choices = Math.floor(Math.random() * strings.length)
-
-function getComputerChoice(strings) {
-
-
-
-    return (result);
-
-
+    return result;
 }
+
+let result = "";
+console.log(result);
