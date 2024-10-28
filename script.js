@@ -4,11 +4,15 @@
     3. Math.random chooses different choices
 */
 
-function getComputerChoice(Rock, Paper, Scissors) {
-    const result = Math.floor(Math.random() * 3)
+function getComputerChoice(num1, num2, num3) {
+    const randomGame = Math.floor(Math.random() * 3).toString
+    
 
     return result;
 }
 
-let result = "";
-console.log(result);
+let num1 = 'rock';
+let num2 = 'paper';
+let num3 = 'scissors';
+
+
