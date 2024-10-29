@@ -7,7 +7,7 @@
 const computerChoice = ["rock", "paper", "scissors"];
 let result = "string";
 
-function getComputerChoice() {
+function getComputerChoice(getHumanChoice) {
     const result = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 
     console.log(result);
@@ -16,10 +16,18 @@ function getComputerChoice() {
 getComputerChoice();
 
 
+
 /*
     1. function name is getHumanChoice
     2. function will return one of the valid choices by user input
     3.can use prompt method to get users input then console.log
 */
 
+const userInput = computerChoice; 
 
+function getHumanChoice(){
+    const userInput = prompt()
+    console.log(userInput);
+} 
+
+getHumanChoice();
