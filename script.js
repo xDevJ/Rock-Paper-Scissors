@@ -1,33 +1,44 @@
 /* 
+STEP 2
     1. function name is getComputerChoice
     2. getComputerChoice randomly selects any of Rock, Paper, Scissors
     3. Math.random chooses different choices
 */
 
 const options = ["rock", "paper", "scissors"];
-
+const humanScore = 0;
+const computerScore = 0;
 
 function getComputerChoice() {
-    const computerSelect = options[Math.floor(Math.random() * computerChoice.length)];
+    const computerSelect = options[Math.floor(Math.random() * options.length)];
 
-    console.log(options);
+    return computerSelect;
 }
 
-getComputerChoice();
-
-
-
 /*
+STEP 3
     1. function name is getHumanChoice
     2. function will return one of the valid choices by user input
     3.can use prompt method to get users input then console.log
 */
-
-const userInput = computerChoice; 
-
 function getHumanChoice(){
-    const userInput = prompt()
-    console.log(userInput);
+    const userInput = prompt("rock, paper, scissors");
+
+    let userInputLower = userInput.toLowerCase();
+    console.log(userInputLower);
 } 
 
-getHumanChoice();
+
+
+/* 
+1. function name playRound
+2. playRound() has two parameters humanChoice and computerChoice. paramets : humanChoice and computerChoice will take the human and computer choices as arguments.
+3. playRound() will console.log a string "You Lose! Paper beats Rock"
+4. increment humanScore || computerScore based on round winners
+*/
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+function playRound(humanChoice, computerChoice){
+
+}
