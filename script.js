@@ -4,13 +4,13 @@
     3. Math.random chooses different choices
 */
 
-const computerChoice = ["rock", "paper", "scissors"];
-let result = "string";
+const options = ["rock", "paper", "scissors"];
 
-function getComputerChoice(getHumanChoice) {
-    const result = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 
-    console.log(result);
+function getComputerChoice() {
+    const computerSelect = options[Math.floor(Math.random() * computerChoice.length)];
+
+    console.log(options);
 }
 
 getComputerChoice();
