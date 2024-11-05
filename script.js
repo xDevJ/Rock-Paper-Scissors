@@ -9,10 +9,11 @@ const options = ["rock", "paper", "scissors"];
 let humanScore = 0;
 let computerScore = 0;
 
-function getComputerChoice() {
-    const computerSelect = options[Math.floor(Math.random() * options.length)];
 
-    return computerSelect;
+function getComputerChoice() {
+    const computerChoice = options[Math.floor(Math.random() * options.length)];
+
+    return computerChoice;
 }
 
 /*
@@ -22,10 +23,21 @@ STEP 3
     3.can use prompt method to get users input then console.log
 */
 function getHumanChoice(){
-    let humanChoice  = prompt()
-    return humanChoice;
-    
-    
+    let userInput = false;
+    while(userInput == false){
+        const humanChoice = prompt("rock, paper, scissors");
+        if(humanChoice == null){
+            continue;
+        }
+        const humanChoiceInLower = humanChoice.toLowerCase();
+        if(options.includes(humanChoiceInLower)){
+            userInput = true;
+            return humanChoiceInLower;
+        }
+        
+    }
+
+    return humanChoiceInLower;
 } 
 
 
