@@ -6,8 +6,8 @@ STEP 2
 */
 
 const options = ["rock", "paper", "scissors"];
-const humanScore = 0;
-const computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     const computerSelect = options[Math.floor(Math.random() * options.length)];
@@ -22,10 +22,10 @@ STEP 3
     3.can use prompt method to get users input then console.log
 */
 function getHumanChoice(){
-    const userInput = prompt("rock, paper, scissors");
-
-    let userInputLower = userInput.toLowerCase();
-    return userInputLower;
+    let humanChoice  = prompt()
+    return humanChoice;
+    
+    
 } 
 
 
@@ -36,8 +36,8 @@ function getHumanChoice(){
 3. playRound() will console.log a string "You Lose! Paper beats Rock" !
 4. increment humanScore || computerScore based on round winners!
 */
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
+// const humanChoice = getHumanChoice();
+// const computerChoice = getComputerChoice();
 
 function playRound(humanChoice, computerChoice){
     if(
@@ -51,31 +51,28 @@ function playRound(humanChoice, computerChoice){
         (humanChoice == "paper" && computerChoice == "rock") ||
         (humanChoice == "scissors" && computerChoice == "paper")
     ){
+        humanScore++;
         console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
     } else {
+        computerScore++;
         console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
     }
-    let humanScore = 0;
-    let computerScore = 0;
+    
 
-    humanScore++;
-
-    computerScore++;
-    if(
-        (humanChoice == "rock" && computerChoice == "rock") ||
-        (humanChoice == "paper" && computerChoice == "paper") ||
-        (humanChoice == "scissors" && computerChoice == "scissors")
-    ){
-        return "Tie";
-    }
-    else if(
-        (humanChoice == "rock" && computerChoice == "scissors") ||
-        (humanChoice == "paper" && computerChoice == "rock") ||
-        (humanChoice == "scissors" && computerChoice == "paper")
-    ){
-        return humanScore;
-    } else {
-        return computerScore;
-    }
+   
 }
-console.log(playRound(humanChoice, computerChoice));
+/*
+1. function name is playGame
+2. playRound() and score variables are declared inside playGame()
+3. play 5 rounds by calling playRound 5 times
+*/
+function playGame(){
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+
+    console.log(`Final Score: Human - ${humanScore}, Computer - ${computerScore}`);
+}
+playGame();
