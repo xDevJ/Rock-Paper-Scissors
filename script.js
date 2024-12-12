@@ -7,8 +7,12 @@ const div = document.createElement('div');
 document.body.appendChild(div);
 div.setAttribute("id", "results");
 const results = document.querySelector("#results"); 
+div.setAttribute("class", "announce");
+const announce = document.querySelector(".announce");
 
-
+div.style.textAlign = "center";
+div.style.fontSize = "30px";
+div.style.color = "blue";
 
 
 button.addEventListener('click', e => {
@@ -52,13 +56,14 @@ button.addEventListener('click', e => {
         } 
         
         if(humanScore === 5){
-            results.textContent = (playerWins + ' ' + humanScore + '-' + computerScore + ' ' + "Player Wins!");
-            
+            results.textContent = (playerWins + ' ' + humanScore + '-' + computerScore);
+            announce.textContent = ("Player Wins!");
             humanScore = 0;
             computerScore = 0;
 
         } else if (computerScore ===  5){
-            results.textContent = (computerWins + ' ' + humanScore + '-' + computerScore + ' ' + "Computer Wins!");
+            results.textContent = (computerWins + ' ' + humanScore + '-' + computerScore);
+            announce.textContent = ("Computer Wins!");
             humanScore = 0;
             computerScore = 0;
         }
